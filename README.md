@@ -2,15 +2,15 @@
 
 **Estudiante:** Janneth Talía Males Conejo
 
-
 ## Conceptos fundamentales de manejo de eventos
 
-Aplicación de escritorio desarrollada en Python con Tkinter como continuación del proyecto restaurante_app.
+Aplicación de escritorio desarrollada en Python con Tkinter como continuación del proyecto `restaurante_app`.
 
-En esta semana se incorpora el manejo de eventos mediante botones y funciones callback para realizar el registro y consulta de ventas, manteniendo la arquitectura modular y la persistencia mediante archivos JSON.
+En esta semana se incorporó el manejo de eventos mediante botones y funciones callback para realizar el registro y consulta de ventas, manteniendo la arquitectura modular y la persistencia mediante archivos JSON.
 
 ## Estructura del proyecto
 
+```text
 restaurante_app/
 ├── datos/
 │   ├── productos.json
@@ -31,6 +31,7 @@ restaurante_app/
 │   └── logo/
 ├── main.py
 └── README.md
+```
 
 ## Funcionalidades
 
@@ -46,36 +47,38 @@ Además, se incorporó:
 - Registro de ventas.
 - Selección de usuario y producto.
 - Visualización de ventas en una tabla.
-- Persistencia de las ventas en ventas.json.
+- Persistencia de las ventas en `ventas.json`.
 - Actualización de la tabla después de registrar una venta.
 
 ## Manejo de eventos
 
-Los botones de la interfaz utilizan command= para ejecutar funciones callback.
+Los botones de la interfaz utilizan `command=` para ejecutar funciones callback.
 
 El flujo principal es:
 
+```text
 Usuario
-↓
+   ↓
 Botón o componente
-↓
+   ↓
 command=
-↓
+   ↓
 Callback
-↓
+   ↓
 RestauranteServicio
-↓
+   ↓
 Persistencia
-↓
+   ↓
 Respuesta en la interfaz
+```
 
-La interfaz recibe las acciones del usuario, mientras que RestauranteServicio contiene la lógica de las operaciones y ArchivoServicio se encarga de la lectura y escritura de los archivos JSON.
+La interfaz recibe las acciones del usuario, mientras que `RestauranteServicio` contiene la lógica de las operaciones y `ArchivoServicio` se encarga de la lectura y escritura de los archivos JSON.
 
 ## Ventas
 
 Las ventas se almacenan en:
 
-datos/ventas.json
+`datos/ventas.json`
 
 Cada venta registra:
 
@@ -89,8 +92,8 @@ La información permanece guardada aunque la aplicación se cierre y vuelva a ej
 
 Los recursos utilizados por la interfaz se encuentran en:
 
-assets/icons/
-assets/logo/
+- `assets/icons/`
+- `assets/logo/`
 
 Se utilizan imágenes para complementar los botones y el logotipo de la aplicación.
 
@@ -98,8 +101,10 @@ Se utilizan imágenes para complementar los botones y el logotipo de la aplicaci
 
 Desde la carpeta del proyecto ejecutar:
 
+```powershell
 python restaurante_App/main.py
+```
 
 ## Conclusión
 
-La Semana 15 amplía el proyecto restaurante_app se incorpora el manejo de eventos mediante command= y funciones callback, además del registro y persistencia de ventas, manteniendo la arquitectura y funcionalidades desarrolladas anteriormente.
+La Semana 15 amplía el proyecto `restaurante_app` incorporando el manejo de eventos mediante `command=` y funciones callback, además del registro y persistencia de ventas, manteniendo la arquitectura y funcionalidades desarrolladas anteriormente.
