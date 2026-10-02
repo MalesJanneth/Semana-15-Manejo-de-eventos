@@ -9,6 +9,9 @@ from ui.main_view import MainView
 class AplicacionRestaurante:
     def __init__(self):
         self.root = tk.Tk()
+        
+        ruta_logo = Path(__file__).resolve().parent / "assets" / "icons" / "logo.png"
+        self.root.iconphoto(False, tk.PhotoImage(file=str(ruta_logo)))
 
         self.root.title("Restaurante - Tkinter")
         self.root.geometry("920x560")
